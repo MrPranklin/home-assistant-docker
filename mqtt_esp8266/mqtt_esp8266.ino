@@ -2,9 +2,9 @@
 #include <PubSubClient.h>
 
 // Update these with values suitable for your network.
-const char* ssid = "redacted";
-const char* password = "redacted";
-const char* mqtt_server = "redacted"; // use `hostname -I` on your server to determine
+const char* ssid = "[redacted]";
+const char* password = "[redacted]";
+const char* mqtt_server = "192.168.0.17"; // use `hostname -I` on your server to determine
 
 WiFiClient espClient;
 PubSubClient client(espClient);
