@@ -1,0 +1,17 @@
+# Whitelist the important files
+!*.yaml
+!.gitignore
+!*.md
+
+# Ignore hidden folders
+.storage
+.cloud
+.google.token
+
+# Ignore secret files
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
+
+# Ignore logs
+*.log

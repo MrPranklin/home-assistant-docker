@@ -1,0 +1,22 @@
+  version: '3'
+  services:
+    mqtt:
+      container_name: mqtt
+      image: toke/mosquitto
+      ports:
+        - 1883:1883
+      volumes:
+        - ./mqtt/config:/mqtt/config:ro
+        - ./mqtt/data:/mqtt/data
+        - ./mqtt/log:/mqtt/log
+        
+    home-assistant:
+      container_name: home-assistant
+      image: homeassistant/home-assistant:latest
+      volumes:
+        - ./config:/config
+        - /etc/localtime:/etc/localtime:ro
+      ports:
+        - 8123:8123
+      depends_on:
+        - mqtt
