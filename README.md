@@ -25,3 +25,7 @@ mqtt:
 
 - connect the client to the same WiFi as the host machine
 - put `192.168.0.17` as broker IP
+
+## Usage
+
+Once you have your Home Assistant (and MQTT) set up, visit `192.168.0.17:8123` from any browser on the same local network and control your devices!
